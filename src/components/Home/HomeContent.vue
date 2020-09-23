@@ -2,7 +2,7 @@
   <v-app>
     <HeadList style="Noto" />
     <v-container style="position:relative;top:-100px;margin-down:-100px">
-      <v-row>
+      <v-row justify="center">
         <v-col>
           <v-img
             :src="require('@/assets/kapong.png')"
@@ -36,9 +36,7 @@ export default {
     HeadList
   },
   data() {
-    return {
-      items: [{ src: require("@/assets/kapong.png") }]
-    };
+    return {};
   },
   methods: {},
   mounted() {}

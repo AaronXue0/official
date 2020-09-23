@@ -14,11 +14,19 @@
       <v-spacer />
     </v-card-title>
     <v-card-subtitle style="position:relative;top:0px">
-      <v-btn icon small color="white">
+      <v-btn
+        href="https://www.facebook.com/Game-Starry-109356847225732"
+        icon
+        small
+        color="white"
+      >
         <v-icon color="black" small>fab fa-facebook-f</v-icon>
       </v-btn>
-      <v-btn icon small color="white">
+      <v-btn href="https://twitter.com/projectstarry1" icon small color="white">
         <v-icon color="black" size="19">mdi-twitter</v-icon>
+      </v-btn>
+      <v-btn icon small color="white">
+        <v-icon color="black" size="19">mdi-message-reply-text</v-icon>
       </v-btn>
     </v-card-subtitle>
   </v-main>

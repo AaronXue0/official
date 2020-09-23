@@ -6,7 +6,9 @@
           <v-row>
             <p class="Zpix">Donate Us</p>
             <v-spacer />
-            <GooglePayButton style="margin-right:10px" />
+            <GooglePayButton
+              style="margin-right:10px;position:relative;top:10px"
+            />
           </v-row>
           <v-row>
             <p
