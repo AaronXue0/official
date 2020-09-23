@@ -37,11 +37,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-
-.Noto {
-  font-family: "Noto Sans", sans-serif;
-}
 .payButton {
   margin-left: auto;
   margin-right: auto;
