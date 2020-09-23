@@ -1,27 +1,15 @@
 <template>
   <v-app>
-    <HeadList style="Noto" />
-    <v-container style="position:relative;top:-100px">
-      <v-row>
-        <v-col>
-          <v-carousel hide-delimiters :show-arrows="false">
-            <v-carousel-item
-              v-for="(item, i) in items"
-              :key="i"
-              :src="item.src"
-            ></v-carousel-item>
-          </v-carousel>
-        </v-col>
-      </v-row>
-    </v-container>
+    <Home class="hidden-md-and-down" />
+    <div class="hidden-lg-and-up">a</div>
   </v-app>
 </template>
 
 <script>
-import HeadList from "@/components/Home/HeadList.vue";
+import Home from "@/components/Home/HomeContent.vue";
 export default {
   components: {
-    HeadList
+    Home
   },
   data() {
     return {

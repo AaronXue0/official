@@ -1,17 +1,17 @@
 <template>
-  <v-content>
+  <v-content style="margin-top:0px;">
     <v-card-title class="Noto">
-      Project Starry
-      <v-card-subtitle style="margin-left:100px">- KA Pong</v-card-subtitle>
-      <v-card-subtitle>- LOMO</v-card-subtitle>
-      <v-spacer />
-      <v-card elevation="0">
+      Project
+      <v-card elevation="0" style="margin-left:15px;">
         <v-img
           :src="require('@/assets/starry.png')"
           width="100"
           style="margin-right:20px"
         />
       </v-card>
+      <v-card-subtitle style="margin-left:100px">- KA Pong</v-card-subtitle>
+      <v-card-subtitle> - LOMO</v-card-subtitle>
+      <v-spacer />
     </v-card-title>
     <v-card-subtitle style="position:relative;top:0px">
       <v-btn icon small color="white">
