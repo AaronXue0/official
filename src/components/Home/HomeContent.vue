@@ -1,32 +1,34 @@
 <template>
-  <v-app>
+  <v-main>
     <HeadList style="Noto" />
-    <v-container style="position:relative;top:-100px;margin-down:-100px">
+    <v-container style="position:relative;top:-50px">
       <v-row justify="center">
         <v-col>
           <v-img
             :src="require('@/assets/kapong.png')"
             max-width="600"
-            style="opacity: 1;position:relative;top:-500px;left:100px;margin-bottom:-300px;margin-right:auto"
+            style="opacity:0.9;"
           >
           </v-img>
           <v-img
             :src="require('@/assets/lomo.jpg')"
-            max-width="500"
-            style="opacity: 0.5;position:relative;top:-500px;left:300px;margin-bottom:-300px;margin-right:auto"
+            max-width="520"
+            style="opacity:0.5;position:relative;top:-300px;left:200px;"
           >
           </v-img>
+          <div
+            class="Noto"
+            style="position:relative;top:-100px;left:1000px;top:-200px;margin-bottom:-1000px"
+          >
+            <span style="font-size:16px">Almost there....</span>
+            <v-icon class="spinner" style="margin-left:10px"
+              >mdi-gamepad</v-icon
+            >
+          </div>
         </v-col>
       </v-row>
-      <div
-        style="position:relative;top:-150px;left:1000px;margin-bottom:-300px"
-        class="Noto"
-      >
-        <span style="font-size:16px">Almost there....</span>
-        <v-icon class="spinner" style="margin-left:10px">mdi-gamepad</v-icon>
-      </div>
     </v-container>
-  </v-app>
+  </v-main>
 </template>
 
 <script>
