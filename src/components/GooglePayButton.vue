@@ -101,7 +101,6 @@ export default {
       paymentsClient
         .loadPaymentData(paymentDataRequest)
         .then(paymentData => {
-          // handle the response
           this.$emit("payed", paymentData);
         })
         .catch(err => {

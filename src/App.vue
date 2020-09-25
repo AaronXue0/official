@@ -3,15 +3,18 @@
     <v-main style="height: 100vh; max-height: 100%;">
       <router-view></router-view>
     </v-main>
+    <appbar class="Noto" />
     <foot class="Noto" />
   </v-app>
 </template>
 
 <script>
+import appbar from "@/components/Appbar/index.vue";
 import foot from "@/components/footer.vue";
 export default {
   name: "App",
   components: {
+    appbar,
     foot
   }
 };

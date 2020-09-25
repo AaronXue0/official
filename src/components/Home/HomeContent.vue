@@ -1,7 +1,6 @@
 <template>
-  <v-main>
-    <HeadList style="Noto" />
-    <v-container style="position:relative;top:-50px">
+  <v-main style="margin-top:20px">
+    <v-container>
       <v-row justify="center">
         <v-col>
           <v-img
@@ -32,11 +31,8 @@
 </template>
 
 <script>
-import HeadList from "@/components/Home/HeadList.vue";
 export default {
-  components: {
-    HeadList
-  },
+  components: {},
   data() {
     return {};
   },

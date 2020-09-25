@@ -7,6 +7,8 @@
             <p class="Zpix">Donate Us</p>
             <v-spacer />
             <GooglePayButton
+              @payed="processPayment"
+              @cancel="handleCancel"
               style="margin-right:10px;position:relative;top:10px"
             />
           </v-row>
@@ -33,7 +35,19 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    processPayment(paymentData) {
+      // @todo pass payment token to your gateway to process payment
+      //   let paymentToken = paymentData.paymentMethodData.tokenizationData.token;
+      this.$router.push({
+        name: "SuccessOfPayment",
+        params: { paymentData: paymentData }
+      });
+    },
+    handleCancel() {
+      alert("Failled");
+    }
+  },
   mounted() {}
 };
 </script>
