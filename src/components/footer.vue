@@ -1,5 +1,5 @@
 <template>
-  <v-footer fixed padless outlined rounded max-height="100">
+  <v-footer fixed padless outlined max-height="100">
     <v-card class="flex">
       <v-card-title>
         <v-col>

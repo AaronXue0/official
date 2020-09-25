@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-container style="height: 100vh; max-height: 100%;">
+    <v-container>
       <router-view></router-view>
     </v-container>
     <foot class="Noto" />

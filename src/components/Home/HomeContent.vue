@@ -15,6 +15,11 @@
             style="opacity:0.5;position:relative;top:-300px;left:200px;"
           >
           </v-img>
+          <div class="arrow" v-if="scrolling">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div
             class="Noto"
             style="position:relative;top:-100px;left:1000px;top:-200px;margin-bottom:-1000px"
@@ -34,10 +39,26 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      scrolling: false
+    };
   },
-  methods: {},
-  mounted() {}
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 0) this.scrolling = false;
+      else this.scrolling = true;
+    }
+  },
+  mounted() {
+    if (window.scrollY > 0) this.scrolling = false;
+    else this.scrolling = true;
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 };
 </script>
 
@@ -55,6 +76,43 @@ export default {
   100% {
     transform: scale(1.2);
     opacity: 0.3;
+  }
+}
+
+/* Scroll Effect */
+.arrow {
+  position: absolute;
+  z-index: 100;
+  left: 70%;
+  top: 400px;
+}
+.arrow span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 5px solid #0a3c57;
+  border-right: 5px solid #0a3c57;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
 </style>
