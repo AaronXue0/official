@@ -22,6 +22,9 @@
         </p>
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <v-btn text color="blue" to="/">Back To Home Page.</v-btn>
+    </v-row>
   </v-card>
 </template>
 

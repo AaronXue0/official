@@ -40,7 +40,7 @@ export default {
   components: {},
   data() {
     return {
-      scrolling: false
+      scrolling: true
     };
   },
   methods: {
