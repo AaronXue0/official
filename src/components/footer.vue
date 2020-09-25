@@ -1,8 +1,8 @@
 <template>
-  <v-footer fixed padless outlined max-height="100">
+  <v-footer fixed padless outlined max-height="80">
     <v-card class="flex">
       <v-card-title>
-        <v-col>
+        <v-col style="position:relative;top:-17px">
           <v-row>
             <p class="Zpix">Donate Us</p>
             <v-spacer />
