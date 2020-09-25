@@ -2,9 +2,9 @@
   <div class="Noto">
     <v-card elevation="0" class="pa-10">
       <v-row
-        align="center"
+        align="start"
         justify="center"
-        style="height: 500px;margin-down:-100px"
+        style="height: 100px;margin-down:0px"
       >
         <v-col>
           <v-row justify="center">
