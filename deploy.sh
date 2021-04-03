@@ -1,0 +1,19 @@
+# abort on errors 
+set -e
+
+npm run build
+
+cd docs
+
+# if you are deploying to a custom domain add a CNAME 
+#echo 'yourcustomdomain.com' > CNAME 
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# deploy 
+echo Deploying.. 
+git push -f "https://github.com/AaronXue0/official.git" master:gh-pages
+
+cd -

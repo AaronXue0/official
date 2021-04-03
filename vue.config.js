@@ -1,8 +1,15 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
-  chainWebpack: config => {
-    config.module.rule('eslint').use('eslint-loader').options({
-      fix: true
-    })
-  }
+
+  pluginOptions: {
+    prerenderSpa: {
+      registry: undefined,
+      renderRoutes: ["/"],
+      useRenderEvent: true,
+      headless: true,
+      onlyProduction: true,
+    },
+  },
+
+  publicPath: process.env.NODE_ENV === "production" ? "/official/" : "/",
 };
