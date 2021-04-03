@@ -1,6 +1,6 @@
 <template>
   <v-footer fixed padless outlined max-height="80">
-    <v-card class="flex">
+    <v-card class="flex" elevation="0">
       <v-card-title>
         <v-col style="position:relative;top:-17px">
           <v-row>

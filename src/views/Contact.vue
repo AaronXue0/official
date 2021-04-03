@@ -1,11 +1,11 @@
 <template>
-  <v-container style="position:relative;top:-70px">
+  <v-container style="position:relative;top:-70px" class="Noto">
     <!-- height: 100vh; max-height: 150%; -->
     <v-form ref="form" id="form">
       <v-row align="center" justify="center">
         <v-col cols="8">
           <v-card class="mx-auto" elevation="0">
-            <v-card-title class="headline">Contact Us</v-card-title>
+            <v-card-title>Contact Us</v-card-title>
             <v-card-subtitle
               >Tell us anything you want. Even the moment you felt in our games.
             </v-card-subtitle>
@@ -20,12 +20,7 @@
           </v-card>
           <v-card class="mx-auto pa-5" elevation="0">
             <v-textarea label="Message"> </v-textarea>
-            <v-btn
-              color="black"
-              class="mx-auto pa-5  primary--text"
-              @click="send"
-              elevation="0"
-            >
+            <v-btn color="black" @click="send" text>
               Send
             </v-btn>
           </v-card>

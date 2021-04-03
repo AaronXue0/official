@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <div class="hidden-md-and-down"><desktop class="Noto" /></div>
-    <div class="hidden-lg-and-up"></div>
+    <div class="hidden-sm-and-down"><desktop class="Noto" /></div>
+    <div class="hidden-md-and-up"></div>
   </v-app>
 </template>
 

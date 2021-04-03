@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-container>
-      <router-view></router-view>
-    </v-container>
+    <router-view></router-view>
     <foot class="Noto" />
   </v-app>
 </template>
@@ -29,5 +27,8 @@ export default {
 }
 .Press2P {
   font-family: "Press Start 2P", cursive;
+}
+div > .v-application--wrap {
+  min-height: 100%;
 }
 </style>
