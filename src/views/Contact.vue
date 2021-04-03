@@ -45,10 +45,6 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: "Zpix";
-  src: url("~@/assets/Zpix.ttf");
-}
 .contactForm {
   font-family: "Zpix", "Press Start 2P", cursive;
 }

@@ -4,21 +4,36 @@
       <v-card-title>
         <v-col style="position:relative;top:-17px">
           <v-row>
-            <p class="Zpix">Donate Us</p>
+            <p class="Noto">Project Starry Game</p>
             <v-spacer />
-            <GooglePayButton
+            <p style="font-size: 11px;">
+              © 2019 Starry Game
+            </p>
+            <!-- <GooglePayButton
               @payed="processPayment"
               @cancel="handleCancel"
               style="margin-right:10px;position:relative;top:10px"
-            />
+            /> -->
           </v-row>
           <v-row>
             <p
               class="Noto"
-              style="font-size: 10px;position: relative;top:-20px;margin-left:1px"
+              style="font-size: 11px;position: relative;top:-20px;margin-left:1px"
             >
-              Price $1.00USD
+              is a indie games team from Taipei, Taiwan.
             </p>
+            <v-spacer />
+            <v-btn
+              color="secondary"
+              v-for="(item, index) in media"
+              :key="index"
+              style="position:relative;top:-20px;"
+              :href="item.linking"
+              icon
+              x-small
+            >
+              <v-icon dark small>{{ item.icon }}</v-icon>
+            </v-btn>
           </v-row>
         </v-col>
       </v-card-title>
@@ -27,13 +42,25 @@
 </template>
 
 <script>
-import GooglePayButton from "@/components/GooglePayButton.vue";
+// import GooglePayButton from "@/components/GooglePayButton.vue";
 export default {
   components: {
-    GooglePayButton
+    // GooglePayButton
   },
   data() {
-    return {};
+    return {
+      media: [
+        {
+          icon: "fab fa-facebook-f",
+          linking: "https://www.facebook.com/Game-Starry-109356847225732"
+        },
+        { icon: "mdi-twitter", linking: "https://twitter.com/projectstarry1" },
+        {
+          icon: "mdi-instagram",
+          linking: "https://twitter.com/projectstarry1"
+        }
+      ]
+    };
   },
   methods: {
     processPayment(paymentData) {
@@ -58,5 +85,9 @@ export default {
   margin-right: auto;
   display: flex;
   justify-content: center;
+}
+
+.iconColor {
+  color: #1d3a50 !important;
 }
 </style>

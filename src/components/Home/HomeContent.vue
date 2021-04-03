@@ -1,12 +1,16 @@
 <template>
-  <v-container class="Noto">
+  <v-container class="Noto" style="position:relative;top:60px">
     <v-row justify="center" align="center">
       <v-hover v-slot="{ hover }">
         <v-card :elevation="hover ? 12 : 0" width="400">
           <v-img
             :src="require('@/assets/escape.png')"
             max-width="1080"
-            :style="hover ? 'opacity:1' : 'opacity:0.8'"
+            :style="
+              hover
+                ? 'opacity:1;postion:relative;z-index:2'
+                : 'opacity:0.8;postion:relative;z-index:2'
+            "
           >
           </v-img>
         </v-card>
@@ -20,12 +24,30 @@
           <v-img
             :src="require('@/assets/SOBCG.png')"
             max-width="1080"
-            :style="hover ? 'opacity:1' : 'opacity:0.8'"
+            :style="hover ? 'opacity:1;z-index:3' : 'opacity:0.7;z-index:3'"
             @click="overlay = true"
           >
           </v-img>
         </v-card>
       </v-hover>
+    </v-row>
+    <v-row>
+      <div
+        class="div-card"
+        style="position:relative;width:200px;height:200px;opacity:10%;left:350px;top:-100px"
+      ></div>
+      <div
+        class="div-card"
+        style="position:relative;width:120px;height:120px;opacity:50%;left:100px;top:50px"
+      ></div>
+      <div
+        class="div-card"
+        style="position:relative;width:200px;height:200px;opacity:50%;left:150px;top:-180px"
+      ></div>
+      <div
+        class="div-card"
+        style="position:relative;width:100px;height:100px;opacity:50%;left:100px;top:-250px"
+      ></div>
     </v-row>
     <v-row justify="end" align="end">
       <v-col cols="7">

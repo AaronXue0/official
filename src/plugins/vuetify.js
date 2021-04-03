@@ -10,10 +10,14 @@ const vuetify = new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: "#ffffff"
+        primary: "#1d3a50",
+        secondary: "#504b79",
+        third: "#ffffff"
       },
       dark: {
-        primary: "#000000"
+        primary: "#1d3a50",
+        secondary: "#504b79",
+        third: "#000000"
       }
     }
   }

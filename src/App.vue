@@ -31,4 +31,23 @@ export default {
 div > .v-application--wrap {
   min-height: 100%;
 }
+
+@font-face {
+  font-family: "Zpix";
+  src: url("~@/assets/fonts/Zpix.ttf");
+}
+.Zpix {
+  font-family: "Zpix", "Noto Sans", sans-serif, "Press Start 2P", cursive;
+}
+
+.div-card {
+  background-image: linear-gradient(to bottom right, #1d3a50, #504b79);
+  z-index: 0;
+  margin-bottom: -550px;
+  white-space: nowrap;
+  /* top: -15px; */
+  /* left: 30px; */
+  /* opicaty: 100% */
+  /* background: rgba(255, 202, 40, 0.5); */
+}
 </style>
