@@ -1,71 +1,79 @@
 <template>
-  <v-container class="Noto" style="position:relative;top:60px">
-    <v-row justify="center" align="center">
-      <v-hover v-slot="{ hover }">
-        <v-card :elevation="hover ? 12 : 0" width="400">
-          <v-img
-            :src="require('@/assets/escape.png')"
-            max-width="1080"
-            :style="
-              hover
-                ? 'opacity:1;postion:relative;z-index:2'
-                : 'opacity:0.8;postion:relative;z-index:2'
-            "
+  <div>
+    <v-container class="Noto" style="position:relative;top:60px">
+      <v-row justify="center" align="center">
+        <v-hover v-slot="{ hover }">
+          <v-card :elevation="hover ? 12 : 0" width="500">
+            <v-img
+              :src="require('@/assets/escape.png')"
+              max-width="1080"
+              :style="
+                hover
+                  ? 'opacity:1;postion:relative;z-index:2'
+                  : 'opacity:0.8;postion:relative;z-index:2'
+              "
+            >
+            </v-img>
+          </v-card>
+        </v-hover>
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 12 : 0"
+            width="500"
+            style="position:reative;left:-100px;top:100px"
           >
-          </v-img>
-        </v-card>
-      </v-hover>
-      <v-hover v-slot="{ hover }">
-        <v-card
-          :elevation="hover ? 12 : 0"
-          width="400"
-          style="position:reative;left:-100px;top:100px"
-        >
-          <v-img
-            :src="require('@/assets/SOBCG.png')"
-            max-width="1080"
-            :style="hover ? 'opacity:1;z-index:3' : 'opacity:0.7;z-index:3'"
-            @click="overlay = true"
-          >
-          </v-img>
-        </v-card>
-      </v-hover>
-    </v-row>
-    <v-row>
-      <div
-        class="div-card"
-        style="position:relative;width:200px;height:200px;opacity:10%;left:350px;top:-100px"
-      ></div>
-      <div
-        class="div-card"
-        style="position:relative;width:120px;height:120px;opacity:50%;left:100px;top:50px"
-      ></div>
-      <div
-        class="div-card"
-        style="position:relative;width:200px;height:200px;opacity:50%;left:150px;top:-180px"
-      ></div>
-      <div
-        class="div-card"
-        style="position:relative;width:100px;height:100px;opacity:50%;left:100px;top:-250px"
-      ></div>
-    </v-row>
-    <v-row justify="end" align="end">
-      <v-col cols="7">
-        <div class="arrow" v-if="scrolling">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </v-col>
-      <v-col cols="2"></v-col>
-      <v-col cols="3">
-        <div style="position:relative;top:200px">
-          <span style="font-size:16px">Almost there....</span>
-          <v-icon class="spinner">mdi-gamepad</v-icon>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+            <v-img
+              :src="require('@/assets/SOBCG.png')"
+              max-width="1080"
+              :style="hover ? 'opacity:1;z-index:3' : 'opacity:0.7;z-index:3'"
+              @click="overlay = true"
+            >
+            </v-img>
+          </v-card>
+        </v-hover>
+      </v-row>
+      <v-row justify="end" align="end">
+        <v-col cols="7"> </v-col>
+        <v-col cols="2">
+          <div class="arrow" v-if="scrolling">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </v-col>
+        <v-col cols="3">
+          <div style="position:relative;top:200px">
+            <span style="font-size:16px">Almost there....</span>
+            <v-icon class="spinner">mdi-gamepad</v-icon>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+    <div
+      class="div-card"
+      style="position:absolute;right:39%;top:10%;width:200px;height:200px;opacity:50%"
+    ></div>
+    <div
+      class="div-card-two"
+      style="position:absolute;left:39%;top:80%;width:120px;height:120px;opacity:50%"
+    ></div>
+    <div
+      class="div-card-one"
+      style="position:absolute;right:0%;top:0%;width:100px;height:100px;opacity:10%"
+    ></div>
+    <div
+      class="div-card-two"
+      style="position:absolute;right:5%;top:20%;width:100px;height:100px;opacity:30%"
+    ></div>
+    <div
+      class="div-card-one"
+      style="position:absolute;left:0%;top:120%;width:100px;height:100px;opacity:10%"
+    ></div>
+    <div
+      class="div-card-two"
+      style="position:absolute;left:5%;top:100%;width:100px;height:100px;opacity:30%"
+    ></div>
+  </div>
 </template>
 
 <script>
@@ -117,7 +125,7 @@ export default {
 .arrow {
   position: absolute;
   z-index: 100;
-  left: 70%;
+  left: 87.2%;
   top: 400px;
 }
 .arrow span {

@@ -50,4 +50,28 @@ div > .v-application--wrap {
   /* opicaty: 100% */
   /* background: rgba(255, 202, 40, 0.5); */
 }
+.div-card-one {
+  background-image: linear-gradient(to top left, #1d3a50, #504b79);
+  z-index: 0;
+  margin-bottom: -550px;
+  white-space: nowrap;
+  /* top: -15px; */
+  /* left: 30px; */
+  /* opicaty: 100% */
+  /* background: rgba(255, 202, 40, 0.5); */
+}
+.div-card-two {
+  background-image: linear-gradient(
+    to top right,
+    rgba(255, 202, 40, 0.5) 10%,
+    transparent 50%
+  );
+  z-index: 0;
+  margin-bottom: -550px;
+  white-space: nowrap;
+  /* top: -15px; */
+  /* left: 30px; */
+  /* opicaty: 100% */
+  /* background: rgba(255, 202, 40, 0.5); */
+}
 </style>

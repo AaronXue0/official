@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <div class="hidden-sm-and-down"><desktop class="Noto" /></div>
-    <div class="hidden-md-and-up"></div>
+    <div class="hidden-md-and-down"><desktop class="Noto" /></div>
+    <div class="hidden-lg-and-up"></div>
   </v-app>
 </template>
 
@@ -9,14 +9,14 @@
 import desktop from "@/components/Home/HomeContent.vue";
 export default {
   components: {
-    desktop
+    desktop,
   },
   data() {
     return {
-      items: [{ src: require("@/assets/kapong.png") }]
+      items: [{ src: require("@/assets/kapong.png") }],
     };
   },
   methods: {},
-  mounted() {}
+  mounted() {},
 };
 </script>

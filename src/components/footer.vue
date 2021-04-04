@@ -1,12 +1,12 @@
 <template>
-  <v-footer fixed padless outlined max-height="80">
+  <v-footer fixed padless outlined max-height="80" color="secondary">
     <v-card class="flex" elevation="0">
       <v-card-title>
         <v-col style="position:relative;top:-17px">
           <v-row>
             <p class="Noto">Project Starry Game</p>
             <v-spacer />
-            <p style="font-size: 11px;">
+            <p class="Noto" style="font-size: 11px;">
               © 2019 Starry Game
             </p>
             <!-- <GooglePayButton
@@ -24,7 +24,7 @@
             </p>
             <v-spacer />
             <v-btn
-              color="secondary"
+              color="white"
               v-for="(item, index) in media"
               :key="index"
               style="position:relative;top:-20px;"
@@ -80,6 +80,9 @@ export default {
 </script>
 
 <style>
+.footer {
+  background-color: linear-gradient(to bottom right, #1d3a50, #504b79);
+}
 .payButton {
   margin-left: auto;
   margin-right: auto;
@@ -89,5 +92,13 @@ export default {
 
 .iconColor {
   color: #1d3a50 !important;
+}
+
+p.Noto {
+  color: aliceblue;
+}
+
+.flex {
+  background-image: linear-gradient(to top right, #1d3a50, #504b79);
 }
 </style>
