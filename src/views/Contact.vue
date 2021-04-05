@@ -1,9 +1,8 @@
 <template>
   <v-container class="Noto">
-    <!-- height: 100vh; max-height: 150%; -->
     <v-form ref="form" id="form">
       <v-row align="center" justify="center">
-        <v-col cols="8">
+        <v-col cols="12" md="8" lg="10">
           <v-card class="mx-auto" elevation="0">
             <v-card-title>Contact Us</v-card-title>
             <v-card-subtitle

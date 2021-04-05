@@ -1,14 +1,14 @@
 <template>
   <div class="about">
-    <desktop />
+    <index />
   </div>
 </template>
 
 <script>
-import desktop from "@/components/About/desktop.vue";
+import index from "@/components/About/index.vue";
 export default {
   components: {
-    desktop,
+    index,
   },
   data() {
     return {
