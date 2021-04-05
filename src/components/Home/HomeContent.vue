@@ -3,7 +3,11 @@
     <v-container class="Noto" style="position:relative;top:60px">
       <v-row justify="center" align="center">
         <v-hover v-slot="{ hover }">
-          <v-card :elevation="hover ? 12 : 0" width="500">
+          <v-card
+            :elevation="hover ? 12 : 0"
+            width="550"
+            @click="push('Escape')"
+          >
             <v-img
               :src="require('@/assets/escape.png')"
               max-width="1080"
@@ -19,14 +23,14 @@
         <v-hover v-slot="{ hover }">
           <v-card
             :elevation="hover ? 12 : 0"
-            width="500"
+            width="550"
             style="position:reative;left:-100px;top:100px"
+            @click="push('SOB')"
           >
             <v-img
               :src="require('@/assets/SOBCG.png')"
               max-width="1080"
               :style="hover ? 'opacity:1;z-index:3' : 'opacity:0.7;z-index:3'"
-              @click="overlay = true"
             >
             </v-img>
           </v-card>
@@ -42,7 +46,7 @@
           </div>
         </v-col>
         <v-col cols="3">
-          <div style="position:relative;top:200px">
+          <div style="position:relative;top:100px;left:12%">
             <span style="font-size:16px">Almost there....</span>
             <v-icon class="spinner">mdi-gamepad</v-icon>
           </div>
@@ -82,14 +86,17 @@ export default {
   data() {
     return {
       scrolling: true,
-      overlay: false
+      overlay: false,
     };
   },
   methods: {
     handleScroll() {
       if (window.scrollY > 0) this.scrolling = false;
       else this.scrolling = true;
-    }
+    },
+    push(name) {
+      this.$router.push({ name: name });
+    },
   },
   mounted() {
     if (window.scrollY > 0) this.scrolling = false;
@@ -100,7 +107,7 @@ export default {
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
-  }
+  },
 };
 </script>
 
@@ -125,7 +132,7 @@ export default {
 .arrow {
   position: absolute;
   z-index: 100;
-  left: 87.2%;
+  left: 90%;
   top: 400px;
 }
 .arrow span {

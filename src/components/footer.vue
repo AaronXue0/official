@@ -20,7 +20,7 @@
               class="Noto"
               style="font-size: 11px;position: relative;top:-20px;margin-left:1px"
             >
-              is a indie games team from Taipei, Taiwan.
+              an indie games team from Taipei, Taiwan.
             </p>
             <v-spacer />
             <v-btn
@@ -52,14 +52,14 @@ export default {
       media: [
         {
           icon: "fab fa-facebook-f",
-          linking: "https://www.facebook.com/Game-Starry-109356847225732"
+          linking: "https://www.facebook.com/Game-Starry-109356847225732",
         },
         { icon: "mdi-twitter", linking: "https://twitter.com/projectstarry1" },
         {
           icon: "mdi-instagram",
-          linking: "https://twitter.com/projectstarry1"
-        }
-      ]
+          linking: "https://twitter.com/projectstarry1",
+        },
+      ],
     };
   },
   methods: {
@@ -68,14 +68,14 @@ export default {
       //   let paymentToken = paymentData.paymentMethodData.tokenizationData.token;
       this.$router.push({
         name: "SuccessOfPayment",
-        params: { paymentData: paymentData }
+        params: { paymentData: paymentData },
       });
     },
     handleCancel() {
       alert("Failled");
-    }
+    },
   },
-  mounted() {}
+  mounted() {},
 };
 </script>
 

@@ -1,5 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <desktop />
   </div>
 </template>
+
+<script>
+import desktop from "@/components/About/desktop.vue";
+export default {
+  components: {
+    desktop,
+  },
+  data() {
+    return {
+      items: [{ src: require("@/assets/kapong.png") }],
+    };
+  },
+  methods: {},
+  mounted() {},
+};
+</script>

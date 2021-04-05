@@ -14,6 +14,7 @@
         elevation="0"
         v-for="(item, index) in contents"
         :key="index"
+        :to="item.url"
       >
         <span class="text--secondary">
           {{ item.name }}
@@ -31,12 +32,12 @@ export default {
     return {
       contents: [
         { name: "About", url: "About" },
-        { name: "News", url: "News" },
-        { name: "Contact", url: "Contact" }
-      ]
+        // { name: "News", url: "News" },
+        { name: "Contact", url: "Contact" },
+      ],
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

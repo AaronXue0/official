@@ -1,5 +1,5 @@
 <template>
-  <v-container style="position:relative;top:-70px" class="Noto">
+  <v-container class="Noto">
     <!-- height: 100vh; max-height: 150%; -->
     <v-form ref="form" id="form">
       <v-row align="center" justify="center">
@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     send() {},
-    setSubmitState() {}
-  }
+    setSubmitState() {},
+  },
 };
 </script>
 
