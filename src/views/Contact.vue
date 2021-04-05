@@ -13,7 +13,6 @@
           <v-card class="mx-auto pa-5" elevation="0">
             <v-text-field
               class="primary--text"
-              color="white"
               label="Email"
               required
             ></v-text-field>

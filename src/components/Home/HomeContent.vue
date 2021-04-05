@@ -10,7 +10,7 @@
           >
             <v-img
               :src="require('@/assets/escape.png')"
-              max-width="1080"
+              max-width="550"
               :style="
                 hover
                   ? 'opacity:1;postion:relative;z-index:2'
@@ -29,7 +29,7 @@
           >
             <v-img
               :src="require('@/assets/SOBCG.png')"
-              max-width="1080"
+              max-width="550"
               :style="hover ? 'opacity:1;z-index:3' : 'opacity:0.7;z-index:3'"
             >
             </v-img>
