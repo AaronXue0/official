@@ -16,18 +16,21 @@
     <script>
         // Handle redirect from 404.html
         (function() {
-            const redirect = localStorage.getItem('spa-redirect');
-            if (redirect) {
-                localStorage.removeItem('spa-redirect');
-                const decodedRedirect = decodeURIComponent(redirect);
-                if (decodedRedirect !== location.pathname.slice(1)) {
-                    history.replaceState(null, null, '/' + decodedRedirect);
+            const redirect = localStorage.getItem('redirect');
+            const repo = localStorage.getItem('repo');
+            if (redirect && repo) {
+                localStorage.removeItem('redirect');
+                localStorage.removeItem('repo');
+                const cleanRedirect = redirect.replace(/^\/+/, '');
+                const basePath = '/' + repo + '/';
+                if (cleanRedirect !== location.pathname.slice(basePath.length)) {
+                    window.history.replaceState(null, null, basePath + cleanRedirect);
                 }
             }
         })();
     </script>
-  <script type="module" crossorigin src="/official/assets/index-DhD2Lf0e.js"></script>
-  <link rel="stylesheet" crossorigin href="/official/assets/index-DYgth5LK.css">
+  <script type="module" crossorigin src="/official/assets/index-Cb1EoV3N.js"></script>
+  <link rel="stylesheet" crossorigin href="/official/assets/index-_zgJdYjf.css">
 </head>
 
 <body>
