@@ -1,31 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
     <script>
         // Get the current path and query string
-        const path = window.location.pathname + window.location.search;
-        
-        // Check if the path is not empty and not just a slash
-        if (path && path !== '/') {
-            // Remove leading slash and encode the path
-            const encodedPath = path.replace(/^\//, '').split('/')
-                .map(segment => encodeURIComponent(segment))
-                .join('/');
-            // Redirect to the index.html with the path as a query parameter
-            window.location.href = `/index.html?redirect=${encodedPath}`;
-        } else {
-            // If path is empty or just a slash, redirect to home page
-            window.location.href = '/';
-        }
+        const segment = location.pathname.slice(1) + location.search + location.hash;
+        // Encode the path to handle special characters
+        const encodedSegment = encodeURIComponent(segment);
+        // Redirect to the main page with the path as a query parameter
+        localStorage.setItem('spa-redirect', encodedSegment);
+        location.replace(location.origin);
     </script>
 </head>
 <body>
-    <noscript>
-        Page not found. Please return to <a href="/">home page</a>.
-    </noscript>
     Redirecting...
 </body>
-</html> 
+</html>

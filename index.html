@@ -16,10 +16,13 @@
     <script>
         // Handle redirect from 404.html
         (function() {
-            const redirect = new URLSearchParams(window.location.search).get('redirect');
+            const redirect = localStorage.getItem('spa-redirect');
             if (redirect) {
-                const cleanPath = '/' + decodeURIComponent(redirect);
-                window.history.replaceState(null, null, cleanPath);
+                localStorage.removeItem('spa-redirect');
+                const decodedRedirect = decodeURIComponent(redirect);
+                if (decodedRedirect !== location.pathname.slice(1)) {
+                    history.replaceState(null, null, '/' + decodedRedirect);
+                }
             }
         })();
     </script>
